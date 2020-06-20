@@ -6,7 +6,9 @@ function Profile() {
   console.log((GLOBAL.googleID).length);
   return (
     <div className="App">
-      <p> Profile </p>
+      <div>
+        <h2>Profile</h2>
+      </div>
     </div>
   );
 }

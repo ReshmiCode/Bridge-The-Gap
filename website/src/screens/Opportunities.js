@@ -1,10 +1,9 @@
 import React from "react";
-import "../App.css";
 
 function Opportunities() {
   return (
     <div className="App">
-      <p> Opportunities </p>
+      <h2> Opportunities </h2>
     </div>
   );
 }
