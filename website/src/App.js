@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router , Route , Redirect , Switch} from 'react-router-dom';
 import './App.css';
 import HomePage from './HomePage' ;
+import Profile from './Profile' ;
 import ScrollToTop from './components/ScrollToTop' ;
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
                 <Switch>
                     <Route path="/" exact>
                       <HomePage/>
+                    </Route>
+                    <Route path="/Profile" exact>
+                      <Profile/>
                     </Route>
                     <Redirect to="/"/>
                 </Switch>
