@@ -4,7 +4,7 @@ function Profile() {
   return (
     <div className="App">
       <div>
-        <h1>Style</h1>
+        <h2>Profile</h2>
       </div>
     </div>
   );
