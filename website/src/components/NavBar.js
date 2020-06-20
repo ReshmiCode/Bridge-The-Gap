@@ -6,12 +6,14 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <header className="main-header">
-      <h1 style={{ fontSize: 25 }}>Bridge The Gap</h1>
+      <NavLink to="/home" exact style={{ textDecoration: "none" }}>
+        <h1 style={{ fontSize: 25, color: "#000000" }}>Bridge The Gap</h1>
+      </NavLink>
       <nav>
         <ul className="nav-links">
           <li>
             <NavLink to="/feed" exact>
-              Home
+              Feed
             </NavLink>
           </li>
           <li>
@@ -21,7 +23,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink to="/qna" exact>
-              Q+A
+              Q&A
             </NavLink>
           </li>
           <NavLink to="/profile" exact>

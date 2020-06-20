@@ -12,7 +12,7 @@ function HomePage() {
 
   return (
     <div className="App">
-      <h1> Bridge The Gap </h1>
+      <h1 style={{ paddingTop: 25 }}> Bridge The Gap </h1>
       <p> (Inspiration) {Lorem} </p>
       <SignInWithGoogle />
       <p> (How It Works) {Lorem} </p>
