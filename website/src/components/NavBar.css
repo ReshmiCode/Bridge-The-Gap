@@ -10,6 +10,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   padding: 0 1rem;
   z-index: 5;
+  justify-content: space-between;
 }
 
 main {
@@ -26,7 +27,7 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 40rem;
+  margin-right: 3rem;
 }
 
 .nav-links li {
