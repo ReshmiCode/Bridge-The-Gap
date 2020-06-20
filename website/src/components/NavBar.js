@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import "./NavBar.css";
 let GLOBAL = require("../global");
@@ -17,14 +17,18 @@ const NavBar = () => {
   const showingNavBar = () => {
     return (
       <header className="main-header">
-        <NavLink to="/home" exact style={{ textDecoration: "none" }}>
-          <h1 style={{ fontSize: 25, color: "#000000" }}>Bridge The Gap</h1>
-        </NavLink>
+        <nav>
+          <ul className="nav-links">
+            <NavLink to="/" exact style={{ textDecoration: "none" }}>
+              <h1 style={{ fontSize: 25, color: "#000000" }}>Bridge The Gap</h1>
+            </NavLink>
+          </ul>
+        </nav>
         <nav>
           <ul className="nav-links">
             <li>
               <NavLink to="/feed" exact>
-                Feed
+                Home
               </NavLink>
             </li>
             <li>
@@ -34,7 +38,7 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink to="/qna" exact>
-                Q&A
+                Q+A
               </NavLink>
             </li>
             <NavLink to="/profile" exact>
