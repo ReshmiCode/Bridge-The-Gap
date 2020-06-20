@@ -21,9 +21,9 @@ function HomePage() {
         width="75%"
         height="550"
         src="https://www.youtube.com/embed/wV1FrqwZyKw"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
         title="Demo Video"
       ></iframe>
       <img src={backdrop} alt="Women in  Tech" />
