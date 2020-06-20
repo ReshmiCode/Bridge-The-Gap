@@ -1,10 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
-const NavBar = (props) => {
+const NavBar = () => {
   return (
-    <div>
-      <p>NavBar</p>
-    </div>
+    <header className="main-header">
+      <h1 style={{ fontSize: 25 }}>Bridge The Gap</h1>
+      <nav>
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/feed" exact>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/opportunities" exact>
+              Opportunities
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/qna" exact>
+              Q+A
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

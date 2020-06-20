@@ -12,11 +12,14 @@ import Profile from "./screens/Profile";
 import QnA from "./screens/QnA";
 import Opportunities from "./screens/Opportunities";
 import ScrollToTop from "./components/ScrollToTop";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div>
       <Router>
+        <NavBar />
+        {/* conditionally render navbar if logged in, use context instead? */}
         <main>
           <ScrollToTop>
             <Switch>
