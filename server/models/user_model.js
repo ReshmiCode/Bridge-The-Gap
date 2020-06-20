@@ -15,6 +15,11 @@ const UserSchema = new mongoose.Schema({
         required: [true, 'Add a username']
     },
 
+    email: {
+        ype: String,
+        required: [true, 'Add an email']
+    },
+
     bio: {
         type: String
     },
