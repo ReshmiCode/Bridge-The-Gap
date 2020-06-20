@@ -15,7 +15,7 @@ function App() {
                     <Route path="/" exact>
                       <HomePage/>
                     </Route>
-                    <Route path="/Profile" exact>
+                    <Route path="/profile" exact>
                       <Profile/>
                     </Route>
                     <Redirect to="/"/>
