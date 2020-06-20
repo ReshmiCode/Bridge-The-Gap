@@ -1,12 +1,11 @@
-import React, { useState} from 'react';
+import React from "react";
 
 const NavBar = (props) => {
-
-    return (
-        <div>
-            <p>NavBar</p>
-        </div>
-    );
+  return (
+    <div>
+      <p>NavBar</p>
+    </div>
+  );
 };
 
 export default NavBar;
