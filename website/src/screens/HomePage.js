@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import SignInWithGoogle from "../components/SignInWithGoogle";
 import backdrop from "../assets/women_in_tech.png";
 
