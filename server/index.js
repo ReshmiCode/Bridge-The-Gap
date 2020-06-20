@@ -12,6 +12,7 @@ connectDB();
 const users = require('./routes/users');
 const posts = require('./routes/posts');
 const resources = require('./routes/resources');
+const questions = require('./routes/questions');
 
 const app = express();
 
@@ -37,6 +38,11 @@ app.use(
 app.use(
     '/api/v1/resources', 
     resources
+);
+
+app.use(
+    '/api/v1/questions', 
+    questions
 );
 
 const PORT = process.env.PORT || 8000;
