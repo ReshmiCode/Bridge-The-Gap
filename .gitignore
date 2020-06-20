@@ -25,3 +25,4 @@ yarn-error.log*
 website/src/config.js
 server/config/config.env
 /website/src/config.js
+/server/config/config.env
