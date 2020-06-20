@@ -19,11 +19,9 @@ const NavBar = () => {
             <header className="main-header">
                 <nav>
                     <ul className="nav-links">
-                        <li>
                             <NavLink to="/" exact>
                             <h1 style={{ fontSize: 25 }}>Bridge The Gap</h1>
                             </NavLink>
-                        </li>
                     </ul>
                 </nav>
                 <nav>
