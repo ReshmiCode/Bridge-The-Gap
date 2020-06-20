@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Avatar, IconButton, TextField, makeStyles } from "@material-ui/core";
+import { Avatar, IconButton, TextField } from "@material-ui/core";
 import { Create, PhotoCamera } from "@material-ui/icons";
 import ToggleButton from "@material-ui/lab/ToggleButton";
+import { makeStyles } from "@material-ui/core/styles";
 import "./Profile.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,8 +23,14 @@ function Profile() {
   return (
     <div className="App">
       <div className="profile-bar">
-        <div style={{ flexDirection: "row", display: "flex" }}>
-          <div>
+        <div
+          style={{
+            flexDirection: "row",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ flex: 1 }}>
             <Avatar
               alt="Profile"
               src="https://image.shutterstock.com/image-vector/social-member-vector-icon-person-260nw-1139787308.jpg"
@@ -33,7 +40,7 @@ function Profile() {
               <PhotoCamera />
             </IconButton>
           </div>
-          <div style={{ width: 800 }}>
+          <div style={{ flex: 1 }}>
             <h2>Reshmi Ranjith</h2>
             {selected ? (
               <p style={{ fontSize: 20 }}>{sampleBio}</p>
@@ -59,9 +66,9 @@ function Profile() {
               <Create />
             </ToggleButton>
           </div>
-        </div>
-        <div>
-          <h2>Reset</h2>
+          <div style={{ flex: 1 }}>
+            <h2>Reset</h2>
+          </div>
         </div>
       </div>
     </div>
