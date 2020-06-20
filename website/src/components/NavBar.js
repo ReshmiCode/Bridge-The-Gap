@@ -47,9 +47,15 @@ const NavBar = () => {
         );
     }
 
+    // return (
+    //     <div>
+    //         {status && showingNavBar()}
+    //     </div>
+    // );
+
     return (
         <div>
-            {status && showingNavBar()}
+            {showingNavBar()}
         </div>
     );
 };
