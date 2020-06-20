@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -23,6 +24,12 @@ const NavBar = () => {
               Q+A
             </NavLink>
           </li>
+          <NavLink to="/profile" exact>
+            <Avatar
+              alt="Profile"
+              src="https://image.shutterstock.com/image-vector/social-member-vector-icon-person-260nw-1139787308.jpg"
+            />
+          </NavLink>
         </ul>
       </nav>
     </header>
