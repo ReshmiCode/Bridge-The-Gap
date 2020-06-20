@@ -1,0 +1,10 @@
+.profile-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-bar div {
+    margin: 2rem;
+}
