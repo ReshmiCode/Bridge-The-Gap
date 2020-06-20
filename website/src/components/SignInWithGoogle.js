@@ -9,9 +9,7 @@ const axios = require("axios").default;
 
 const  SignInWithGoogle = props => {
 
-  let [googleProfile, setGoogleProfile] = useState('');
-
-    const newProfile = () => {
+    const newProfile = (googleProfile) => {
       const newUser = {
         googleID: googleProfile.googleId,
         userName: googleProfile.name,
@@ -19,11 +17,11 @@ const  SignInWithGoogle = props => {
         email: googleProfile.email
       };
 
-      axios.get(`https://bridge-the-gap.herokuapp.com/NatureDex/api/v1/users/${newUser.googleID}`)
+      axios.get(`https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${GLOBAL.googleID}`)
         .then(function (response) {
           if (response.data.data.length === 0) {
-            axios
-              .post("https://bridge-the-gap.herokuapp.com/api/v1/users/", newUser)
+            console.log("newUser = ", newUser);
+            axios.post("https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/", newUser)
               .then(function (response) {
                 console.log(response);
               })
@@ -39,9 +37,8 @@ const  SignInWithGoogle = props => {
   
     const responseGoogleSuccess = (response) => {
       console.log(response);
-      setGoogleProfile(response.profileObj)
       GLOBAL.googleID = response.googleId;
-      newProfile();
+      newProfile(response.profileObj);
       props.history.push("/profile");
     }
   
