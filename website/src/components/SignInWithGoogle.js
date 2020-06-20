@@ -19,11 +19,11 @@ const  SignInWithGoogle = props => {
         email: googleProfile.email
       };
 
-      axios.get(`https://hdt-node-servers.herokuapp.com/NatureDex/api/v1/users/${newUser.googleID}`)
+      axios.get(`https://bridge-the-gap.herokuapp.com/NatureDex/api/v1/users/${newUser.googleID}`)
         .then(function (response) {
           if (response.data.data.length === 0) {
             axios
-              .post("https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/", newUser)
+              .post("https://bridge-the-gap.herokuapp.com/api/v1/users/", newUser)
               .then(function (response) {
                 console.log(response);
               })
