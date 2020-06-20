@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const ResourceSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: [true, 'Add content']
+        required: [true, 'Add a title']
     },
     
     category: {
