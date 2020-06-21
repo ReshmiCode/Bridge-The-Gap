@@ -1,6 +1,12 @@
 import React from "react";
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+
+const direction = {
+  flexdirection: "row"
+};
+const size = {
+  margin: 40
+};
 
 function QnA() {
   return (
@@ -8,18 +14,19 @@ function QnA() {
       <h2> Q+A </h2>
       <p>Frequently Asked Questions</p>
 
-      <ButtonGroup size="large" color="#c4c4c4" aria-label="large outlined primary button group">
-        <Button>One</Button>
-        <Button>Two</Button>
-        <Button>Three</Button>
-      </ButtonGroup>
-
-      <body>
-        <form>
-          <button name = "button" value = "Ok" type = "button">Click Me</button>
-        </form>
-      </body>
-
+      <p>Search</p>      
+      
+      <div style={direction}>
+      <Button variant="contained" color="#C4C4C4" disableElevation style={size}>
+        General
+      </Button>
+      <Button variant="contained" color="#C4C4C4" disableElevation style={size}>
+        Opportunity
+      </Button>
+      <Button variant="contained" color="#C4C4C4" disableElevation style={size}>
+        Community
+      </Button>
+      </div>    
 
     </div>
   );

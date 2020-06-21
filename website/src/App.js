@@ -13,15 +13,13 @@ import QnA from "./screens/QnA";
 import Opportunities from "./screens/Opportunities";
 import ScrollToTop from "./components/ScrollToTop";
 import NavBar from "./components/NavBar";
-let GLOBAL = require("./global");
 
 function App() {
-
   return (
     <div>
       <Router>
         <main>
-        <NavBar/>
+          <NavBar />
           <ScrollToTop>
             <Switch>
               <Route path="/" exact>
