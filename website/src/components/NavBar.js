@@ -28,7 +28,7 @@ const NavBar = () => {
           <ul className="nav-links">
             <li>
               <NavLink to="/feed" exact>
-                Home
+                Feed
               </NavLink>
             </li>
             <li>
