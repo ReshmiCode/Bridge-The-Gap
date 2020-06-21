@@ -1,7 +1,6 @@
 import React from "react";
 import SignInWithGoogle from "../components/SignInWithGoogle";
 import backdrop from "../assets/gorls.png";
-
 let GLOBAL = require("../global");
 
 function HomePage() {

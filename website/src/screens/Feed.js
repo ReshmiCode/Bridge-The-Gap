@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -11,7 +11,23 @@ import {
 } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
 import backdrop from "../assets/gorls.png";
+import NavBar from "../components/NavBar";
+const axios = require("axios").default;
+
 function Feed() {
+  let [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await axios(
+        `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/posts`
+      );
+      console.log("All posts", result.data.data);
+      setInfo(result.data.data);
+    }
+    fetchData();
+  }, []);
+
   const flexContainer = {
     display: "flex",
     flexWrap: "wrap",
@@ -19,66 +35,26 @@ function Feed() {
     overflow: "hidden",
     width: "100%",
   };
-  const tileData = [
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-  ];
 
   return (
     <div className="App">
+      <NavBar />
       <h2> See What Other Women Have Achieved! </h2>
       <div style={flexContainer}>
         <GridList style={{ width: "100%" }}>
-          {tileData.map((tile) => (
+          {info.map((post) => (
             <GridListTile style={{ width: "20%" }}>
               <Card style={{ height: 200 }}>
-                {tile.content ? (
+                {post.content ? (
                   <CardContent>
-                    <Typography>{tile.content}</Typography>
+                    <Typography>{post.content}</Typography>
                   </CardContent>
                 ) : (
-                  <CardMedia image={tile.image} style={{ height: 200 }} />
+                  <CardMedia image={post.image} style={{ height: 200 }} />
                 )}
               </Card>
               <GridListTileBar
-                title={tile.title}
-                subtitle={<span>by: {tile.author}</span>}
+                title={post.title}
                 actionIcon={
                   <IconButton>
                     <InfoIcon />

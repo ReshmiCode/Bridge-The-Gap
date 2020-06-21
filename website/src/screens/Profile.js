@@ -4,6 +4,7 @@ import CardList from "../components/CardList";
 import Timeline from "../components/Timeline";
 import "./Profile.css";
 import backdrop from "../assets/gorls.png";
+import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 let GLOBAL = require("../global");
 
@@ -22,6 +23,7 @@ export default function Profile() {
 
   return (
     <div className="App">
+      <NavBar />
       <ProfileBar />
       <h3>Things I Can Help With:</h3>
       {user && <CardList cards={user.pushList} />}

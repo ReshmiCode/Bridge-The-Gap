@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import SearchBar from "search-bar-react";
 import backdrop from "../assets/gorls.png";
+import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
 const direction = {
@@ -40,7 +41,7 @@ function QnA() {
         <GridListTile style={{ width: "30%", height: null }}>
           <Card>
             <CardContent>
-              <Typography>{ques.question}</Typography>
+              <h5>{ques.question}</h5>
               <Typography>{ques.answer}</Typography>
             </CardContent>
           </Card>
@@ -51,6 +52,7 @@ function QnA() {
 
   return (
     <div className="App">
+      <NavBar />
       <h2>Frequently Asked Questions</h2>
       <SearchBar size="large" width="100%" autoFocus placeholder="Search..." />
 
