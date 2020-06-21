@@ -29,7 +29,7 @@ function HomePage() {
       <iframe
         width="75%"
         height="550"
-        src="https://www.youtube.com/embed/wV1FrqwZyKw"
+        src="https://www.youtube.com/embed/sjCK1cpL7_o"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
