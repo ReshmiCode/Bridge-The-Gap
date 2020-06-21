@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Avatar, IconButton, TextField } from "@material-ui/core";
+import { Avatar, IconButton, TextField, Button } from "@material-ui/core";
 import {
   Create,
   PhotoCamera,
@@ -52,7 +52,7 @@ function ProfileBar() {
         </ToggleButton>
       </div>
       <div style={{ flex: 1 }}>
-        <p>Social Links:</p>
+        <p>Find Me @:</p>
         <IconButton>
           <LinkedIn />
         </IconButton>
@@ -62,6 +62,7 @@ function ProfileBar() {
         <IconButton>
           <GitHub />
         </IconButton>
+        <Button>Request Connection</Button>
       </div>
     </div>
   );
