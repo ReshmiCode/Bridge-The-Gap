@@ -13,12 +13,13 @@ import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
 const direction = {
-  flexdirection: "row",
+  flexDirection: "row",
 };
 const size = {
   margin: 40,
   backgroundColor: "#ffa899",
 };
+const gridList = {};
 
 function QnA() {
   const [cat, setCat] = useState("General");
@@ -79,7 +80,13 @@ function QnA() {
           Community
         </Button>
       </div>
-      <GridList style={{ width: "100%" }}>
+      <GridList
+        style={{
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "space-around",
+        }}
+      >
         {questions && renderQuestions()}
       </GridList>
       <img

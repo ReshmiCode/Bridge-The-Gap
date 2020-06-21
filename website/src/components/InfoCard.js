@@ -38,9 +38,20 @@ const InfoCard = (props) => {
             )}
             <Typography> {resource.content} </Typography>
             {resource.link && (
-              <button>
-                <a href={resource.link} target="_blank">
-                  Know More
+              <button
+                style={{
+                  padding: 10,
+                  borderRadius: 15,
+                  backgroundColor: "#ffa090",
+                  border: "none",
+                }}
+              >
+                <a
+                  href={resource.link}
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Learn More
                 </a>
               </button>
             )}

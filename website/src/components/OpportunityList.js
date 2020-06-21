@@ -26,6 +26,7 @@ const OpportunityList = (props) => {
     flexWrap: "wrap",
     transform: "translateZ(0)",
     justifyContent: "space-around",
+    alignItems: "center",
   };
 
   return (
