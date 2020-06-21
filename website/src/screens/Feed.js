@@ -42,7 +42,7 @@ function Feed() {
     const result = await axios(
       `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${userID}`
     );
-    console.log("User", result.data.data[0].userName)
+    console.log("User", result.data.data[0].userName);
     setUserName(result.data.data[0].userName);
     return result.data.data[0].userName;
   }
@@ -86,6 +86,7 @@ function Feed() {
         resizeMode={"cover"}
         style={{ width: "100%", paddingTop: 20 }}
         source={{ backdrop }}
+        className="coverImg"
       />
     </div>
   );

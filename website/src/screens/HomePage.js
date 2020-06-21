@@ -46,6 +46,10 @@ function HomePage() {
       >
         Source Code
       </button>
+      <p style={{ fontSize: 30 }}>
+        Made with 💖 by Medha Jonnada, Megan Tran, Reshmi Ranjith, and Saloni
+        Shivdasani
+      </p>
       <img
         src={backdrop}
         alt="Women in  Tech"
@@ -53,11 +57,6 @@ function HomePage() {
         style={{ width: "100%", paddingTop: 20 }}
         source={{ backdrop }}
       />
-      <p>
-        {" "}
-        Made with 💖 by Medha Jonnada, Megan Tran, Reshmi Ranjith, and Saloni
-        Shivdasani{" "}
-      </p>
     </div>
   );
 }
