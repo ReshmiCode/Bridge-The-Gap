@@ -36,11 +36,11 @@ const UserSchema = new mongoose.Schema({
         type: String
     },
 
-    push: [
+    pushList: [
         String
     ],
 
-    pull: [
+    pullList: [
         String
     ],
     
