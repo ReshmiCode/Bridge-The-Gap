@@ -33,46 +33,6 @@ function Feed() {
     overflow: "hidden",
     width: "100%",
   };
-  const tileData = [
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-      content: "zoo wee mama",
-    },
-    {
-      image: "https://www.marlerblog.com/files/2013/03/orange.jpg",
-      author: "Medha Notepad Jonnada",
-      title: "my fav!!",
-    },
-  ];
 
   return (
     <div className="App">
@@ -92,7 +52,6 @@ function Feed() {
               </Card>
               <GridListTileBar
                 title={post.title}
-                // subtitle={<span>by: {tile.author}</span>}
                 actionIcon={
                   <IconButton>
                     <InfoIcon />
