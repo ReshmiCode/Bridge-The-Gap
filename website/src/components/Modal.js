@@ -23,14 +23,14 @@ function ModalButton() {
     const handleSubmit = (event) => {
         const newPost = {
             user: GLOBAL.googleID,
-            title: title,
+            title: "title",
             category: "test",
             content: "content",
         };
 
         axios
         .post(
-          "https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/posts/",
+          "https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/posts",
           newPost
         )
         .then(function (response) {
