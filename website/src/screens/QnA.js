@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import SearchBar from "search-bar-react";
 
@@ -11,6 +11,11 @@ const size = {
 };
 
 function QnA() {
+  const [cat, setCat] = useState(0);
+  const renderQuestions = () => {
+    return <h2>{cat}</h2>;
+  };
+
   return (
     <div className="App">
       <h2>Frequently Asked Questions</h2>
@@ -25,16 +30,17 @@ function QnA() {
       />
 
       <div style={direction}>
-        <Button variant="contained" style={size}>
+        <Button variant="contained" onClick={() => setCat(0)} style={size}>
           General
         </Button>
-        <Button variant="contained" style={size}>
+        <Button variant="contained" onClick={() => setCat(1)} style={size}>
           Opportunity
         </Button>
-        <Button variant="contained" style={size}>
+        <Button variant="contained" onClick={() => setCat(2)} style={size}>
           Community
         </Button>
       </div>
+      {renderQuestions()}
     </div>
   );
 }
