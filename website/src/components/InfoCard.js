@@ -16,7 +16,7 @@ const InfoCard = (props) => {
     flexWrap: "nowrap",
     transform: "translateZ(0)",
     height: null,
-    width: "100%",
+    width: 500,
   };
 
   const card = {
