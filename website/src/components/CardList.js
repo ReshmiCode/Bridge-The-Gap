@@ -10,7 +10,7 @@ const axios = require("axios").default;
 let GLOBAL = require("../global");
 
 const CardList = (props) => {
-  let [info, setInfo] = useState(["GCP"]);
+  let [info, setInfo] = useState([]);
   const status = props.type;
 
   const flexContainer = {
