@@ -28,6 +28,9 @@ function QnA() {
       </Button>
       </div>    
 
+      <p>Can't find your question? No Problem!</p>  
+      <h5>Type your question here!</h5>
+
     </div>
   );
 }
