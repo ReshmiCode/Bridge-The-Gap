@@ -34,11 +34,11 @@ const OpportunityList = (props) => {
 
     return (
         <div style={flexContainer}>
-        <GridList style={gridList}>
-        { resources.map(function (resource, i) {
-            return(<InfoCard resource={resource}/>)
-        })}
-        </GridList>
+            <GridList style={gridList}>
+                { resources.map(function (resource, i) {
+                    return(<InfoCard resource={resource}/>)
+                })}
+            </GridList>
         </div>
     );
 };

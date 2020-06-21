@@ -1,5 +1,6 @@
 import React from "react";
 import OpportunityList from "../components/OpportunityList";
+import "./Profile.css";
 
 export default function Opportunities() {
   return (

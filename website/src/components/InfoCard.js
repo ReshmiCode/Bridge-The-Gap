@@ -25,7 +25,7 @@ const InfoCard = (props) => {
     };
 
     return (
-        <GridListTile>
+        <GridListTile style={{ height: null , width:"25%"}}>
             <Card>
                 <CardContent>
                     <Typography variant="h5"> {resource.title} </Typography>
