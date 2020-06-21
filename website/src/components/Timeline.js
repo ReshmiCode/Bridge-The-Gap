@@ -1,46 +1,32 @@
-import React from "react";
+import React, { useState , useEffect} from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { Create } from "@material-ui/icons";
 import "react-vertical-timeline-component/style.min.css";
+import TimelineCard from "./TimeLineCard";
+const axios = require("axios").default;
+let GLOBAL = require("../global");
 
 const Timeline = () => {
+  let [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await axios(
+        `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${GLOBAL.googleID}`
+      );
+      setInfo(result.data.data[0].posts);
+    }
+    fetchData();
+  }, []);
+
   return (
     <VerticalTimeline>
-      <VerticalTimelineElement
-        contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-        date="2011 - present"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon={<Create />}
-      >
-        <h4 className="vertical-timeline-element-subtitle">Project</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu.
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
-        date="2010 - 2011"
-        iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-        icon={<Create />}
-      >
-        <h4 className="vertical-timeline-element-subtitle">Lead Team</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu.
-        </p>
-      </VerticalTimelineElement>
+      {info.map((post) => (
+          <TimelineCard post={post}/>
+        ))}
     </VerticalTimeline>
   );
 };
