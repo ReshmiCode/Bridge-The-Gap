@@ -29,10 +29,17 @@ const InfoCard = (props) => {
             <Card>
                 <CardContent>
                     <Typography variant="h5"> {resource.title} </Typography>
-                    <CardMedia
-                        src={resource.image}
-                        title="Resource Image"
-                    />
+                    {
+                        resource.image ? 
+                        <CardMedia
+                            src={resource.image}
+                            title="Resource Image"
+                        />:
+                        <CardMedia
+                            src="https://image.shutterstock.com/image-photo/two-small-rabbits-isolated-on-260nw-795213922.jpg"
+                            title="Resource Image"
+                        />
+                    }
                     <Typography> {resource.content} </Typography>
                     {
                         resource.link && 
@@ -40,7 +47,6 @@ const InfoCard = (props) => {
                             <a  href={resource.link} target="_blank">Know More</a>
                         </button>
                     }
-                    
                 </CardContent>
             </Card>
         </GridListTile>
