@@ -23,8 +23,9 @@ const OpportunityList = (props) => {
     overflow: "hidden",
   };
   const gridList = {
-    flexWrap: "nowrap",
+    flexWrap: "wrap",
     transform: "translateZ(0)",
+    justifyContent: "space-around",
   };
 
   return (

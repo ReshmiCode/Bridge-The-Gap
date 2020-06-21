@@ -1,6 +1,6 @@
 import React from "react";
 import SignInWithGoogle from "../components/SignInWithGoogle";
-import backdrop from "../assets/women_in_tech.png";
+import backdrop from "../assets/gorls.png";
 
 let GLOBAL = require("../global");
 
@@ -12,7 +12,7 @@ function HomePage() {
 
   return (
     <div className="App">
-      <h1  style={{ paddingTop: 25 }}> Bridge The Gap </h1>
+      <h1 style={{ paddingTop: 25 }}> Bridge The Gap </h1>
       <p> (Inspiration) {Lorem} </p>
       <SignInWithGoogle />
       <p> (How It Works) {Lorem} </p>
@@ -25,9 +25,25 @@ function HomePage() {
         allowFullScreen
         title="Demo Video"
       ></iframe>
-      <button href="https://devpost.com/software/bridge-the-gap" target="_blank">Know More</button>
-      <button href="https://github.com/ReshmiCode/Bridge-The-Gap" target="_blank">Source Code</button>
-      <img src={backdrop} alt="Women in  Tech" />
+      <button
+        href="https://devpost.com/software/bridge-the-gap"
+        target="_blank"
+      >
+        Know More
+      </button>
+      <button
+        href="https://github.com/ReshmiCode/Bridge-The-Gap"
+        target="_blank"
+      >
+        Source Code
+      </button>
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
       <p>
         {" "}
         Made with 💖 by Medha Jonnada, Megan Tran, Reshmi Ranjith, and Saloni
