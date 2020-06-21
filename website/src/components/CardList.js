@@ -13,18 +13,20 @@ const CardList = (props) => {
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
+    width: "100%",
   };
   const gridList = {
     flexWrap: "nowrap",
     transform: "translateZ(0)",
+    width: "100%",
   };
 
   return (
     <div style={flexContainer}>
       <GridList style={gridList}>
         {props.cards.map((item) => (
-          <GridListTile>
-            <Card style={{ width: "fit-content" }}>
+          <GridListTile style={{ width: "25%" }}>
+            <Card>
               <CardContent>
                 <Typography>{item}</Typography>
               </CardContent>
