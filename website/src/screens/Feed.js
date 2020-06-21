@@ -25,7 +25,7 @@ function Feed() {
         `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/posts`
       );
       console.log("All posts", result.data.data);
-      setInfo(result.data.data);
+      setInfo(result.data.data.reverse());
     }
     fetchData();
   }, []);

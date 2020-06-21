@@ -57,7 +57,6 @@ function ProfileBar() {
               fullWidth
             />
             <ModalButton/>
-            <Button>Add Component</Button>
           </React.Fragment>
         )}
         <ToggleButton
