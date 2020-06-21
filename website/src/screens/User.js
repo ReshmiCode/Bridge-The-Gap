@@ -79,7 +79,6 @@ export default function User({ match }) {
       <h3>Things I Want Help With:</h3>
       {user && <CardList cards={user.pullList} />}
       <h3>My Journey:</h3>
-      //TODO: Timeline
       <Timeline user={GLOBAL.googleID}/>
       <img
         src={backdrop}
