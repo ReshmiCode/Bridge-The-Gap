@@ -39,7 +39,7 @@ function QnA() {
         <GridListTile style={{ width: "30%", height: null }}>
           <Card>
             <CardContent>
-              <Typography>{ques.question}</Typography>
+              <h5>{ques.question}</h5>
               <Typography>{ques.answer}</Typography>
             </CardContent>
           </Card>
