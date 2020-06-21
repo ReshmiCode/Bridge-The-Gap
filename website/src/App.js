@@ -36,9 +36,7 @@ function App() {
               <Route path="/opportunities" exact>
                 <Opportunities />
               </Route>
-              <Route path="/user" exact>
-                <User />
-              </Route>
+              <Route path="/user/:id" exact component={User} />
               <Redirect to="/" />
             </Switch>
           </ScrollToTop>

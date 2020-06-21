@@ -9,6 +9,7 @@ import {
   GridListTileBar,
   IconButton,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import InfoIcon from "@material-ui/icons/Info";
 import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
@@ -53,14 +54,16 @@ function Feed() {
                   <CardMedia image={post.image} style={{ height: 200 }} />
                 )}
               </Card>
-              <GridListTileBar
-                title={post.title}
-                actionIcon={
-                  <IconButton>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
+              <Link to={`user/${post.user}`}>
+                <GridListTileBar
+                  title={post.title}
+                  actionIcon={
+                    <IconButton>
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </Link>
             </GridListTile>
           ))}
         </GridList>
