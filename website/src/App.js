@@ -9,6 +9,7 @@ import "./App.css";
 import HomePage from "./screens/HomePage";
 import Feed from "./screens/Feed";
 import Profile from "./screens/Profile";
+import User from "./screens/User";
 import QnA from "./screens/QnA";
 import Opportunities from "./screens/Opportunities";
 import ScrollToTop from "./components/ScrollToTop";
@@ -34,6 +35,9 @@ function App() {
               </Route>
               <Route path="/opportunities" exact>
                 <Opportunities />
+              </Route>
+              <Route path="/user" exact>
+                <User />
               </Route>
               <Redirect to="/" />
             </Switch>
