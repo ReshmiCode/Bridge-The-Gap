@@ -19,7 +19,11 @@ const NavBar = () => {
       <header className="main-header">
         <nav>
           <ul className="nav-links">
-            <NavLink to="/" exact style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/"
+              exact
+              style={{ textDecoration: "none", background: "transparent" }}
+            >
               <h1 style={{ fontSize: 25, color: "#000000" }}>Bridge The Gap</h1>
             </NavLink>
           </ul>
