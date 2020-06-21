@@ -77,7 +77,7 @@ function QnA() {
           onClick={() => setCat("Community")}
           style={size}
         >
-          Community
+          Interview
         </Button>
       </div>
       <GridList
