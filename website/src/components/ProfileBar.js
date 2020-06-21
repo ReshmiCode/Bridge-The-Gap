@@ -13,7 +13,7 @@ let GLOBAL = require("../global");
 
 function ProfileBar() {
   const [selected, setSelected] = useState(false);
-  let [info, setInfo] = useState(["GCP"]);
+  let [info, setInfo] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
