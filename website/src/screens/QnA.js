@@ -8,6 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import SearchBar from "search-bar-react";
+import backdrop from "../assets/gorls.png";
 const axios = require("axios").default;
 
 const direction = {
@@ -79,6 +80,13 @@ function QnA() {
       <GridList style={{ width: "100%" }}>
         {questions && renderQuestions()}
       </GridList>
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
     </div>
   );
 }
