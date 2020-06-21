@@ -34,9 +34,13 @@ const InfoCard = (props) => {
                         title="Resource Image"
                     />
                     <Typography> {resource.content} </Typography>
-                    <button>
-                        <a  href={resource.link} target="_blank">Know More</a>
-                    </button>
+                    {
+                        resource.link && 
+                        <button>
+                            <a  href={resource.link} target="_blank">Know More</a>
+                        </button>
+                    }
+                    
                 </CardContent>
             </Card>
         </GridListTile>
