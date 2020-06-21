@@ -40,10 +40,10 @@ exports.getQuestion = async (req, res, next) => {
     }
 }
 
-//TODO: This
 exports.getTagQuestion = async (req, res, next) => {
     try {
-        const questions = await Question.find().where('_id').in(req.params.id).exec((err, records) => {});
+        const questions = await Question.find( { tags: { $in: [req.params.id] } });
+        console.log(questions);
 
         if(!questions){
             return res.status(404).json({
