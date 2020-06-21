@@ -30,6 +30,7 @@ const TimelineCard = (props) => {
       >
         <h4 className="vertical-timeline-element-subtitle">{info.title}</h4>
         <h5>Category: {info.category}</h5>
+        {info.image && <img src={info.image} />}
         <p> {info.content} </p>
       </VerticalTimelineElement>
   );
