@@ -17,13 +17,11 @@ const ResourceSchema = new mongoose.Schema({
     },
     
     image: {
-        type: String,
-        default: 'https://www.protexinvet.com/userfiles/image/cute-2500929_1920_(1).jpg'
+        type: String
     },
 
     link: {
-        type: String,
-        default: 'https://mlh-bridge-the-gap.web.app'
+        type: String
     },
 });
 
