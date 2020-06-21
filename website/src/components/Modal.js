@@ -6,27 +6,31 @@ const axios = require("axios").default;
 function ModalButton() {
     const [show, setShow] = useState(false);
     
-    const [title, setTitle] = useState("");
-    const [content, setContent] = useState("");
+    const [postTitle, setTitle] = useState("");
+    const [postContent, setContent] = useState("");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     const handleTitleChange = (event) => {
-        setTitle(event.target.title);
+        setTitle(event.target.value);
     }
 
     const handleContentChange = (event) => {
-        setContent(event.target.content);
+        setContent(event.target.value);
     }
 
     const handleSubmit = (event) => {
+        event.preventDefault();
+
         const newPost = {
             user: GLOBAL.googleID,
-            title: "title",
+            title: postTitle,
             category: "test",
-            content: "content",
+            content: postContent,
         };
+
+        console.log(newPost);
 
         axios
         .post(
@@ -39,8 +43,6 @@ function ModalButton() {
         .catch(function (error) {
           console.log(error);
         });
-
-        event.preventDefault();
     }
   
     return (
@@ -57,11 +59,11 @@ function ModalButton() {
             <form onSubmit={handleSubmit}>
                 <label>
                     Title:
-                    <input type="text" name="title" value={title} onChange={handleTitleChange}/>
+                    <input type="text" name="title" value={postTitle} onChange={handleTitleChange}/>
                 </label>
                 <label>
                     Description:
-                    <input type="text" name="content" value={content} onChange={handleContentChange}/>
+                    <input type="text" name="content" value={postContent} onChange={handleContentChange}/>
                 </label>
                 <input type="submit" value="Submit" />
             </form>

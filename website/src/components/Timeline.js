@@ -17,7 +17,7 @@ const Timeline = () => {
       const result = await axios(
         `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${GLOBAL.googleID}`
       );
-      setInfo(result.data.data[0].posts);
+      setInfo(result.data.data[0].posts.reverse());
     }
     fetchData();
   }, []);
