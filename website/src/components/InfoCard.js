@@ -28,12 +28,15 @@ const InfoCard = (props) => {
         <GridListTile>
             <Card>
                 <CardContent>
-                <Typography variant="h5"> {resource.title} </Typography>
-                <CardMedia
-                    src={resource.image}
-                    title="Resource Image"
-                />
-                <Typography> {resource.content} </Typography>
+                    <Typography variant="h5"> {resource.title} </Typography>
+                    <CardMedia
+                        src={resource.image}
+                        title="Resource Image"
+                    />
+                    <Typography> {resource.content} </Typography>
+                    <button>
+                        <a  href={resource.link} target="_blank">Know More</a>
+                    </button>
                 </CardContent>
             </Card>
         </GridListTile>
