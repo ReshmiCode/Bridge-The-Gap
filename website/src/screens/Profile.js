@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileBar from "../components/ProfileBar";
 import CardList from "../components/CardList";
+import Timeline from "../components/Timeline";
 import "./Profile.css";
 
 export default function Profile() {
@@ -11,6 +12,8 @@ export default function Profile() {
       <CardList />
       <h3>Things I Want Help With:</h3>
       <CardList />
+      <h3>My Journey:</h3>
+      <Timeline />
     </div>
   );
 }
