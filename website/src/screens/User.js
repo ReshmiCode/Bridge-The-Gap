@@ -7,19 +7,27 @@ import {
   Twitter,
   GitHub,
 } from "@material-ui/icons";
+import {
+VerticalTimeline,
+VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import TimelineCard from "../components/TimeLineCard";
 import CardList from "../components/CardList";
 import Timeline from "../components/Timeline";
 import "./Profile.css";
 import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
 const axios = require("axios").default;
+let GLOBAL = require("../global");
 
 export default function User({ match }) {
   const [user, setUser] = useState(null);
-  const [userPic, setUserPic] = useState(null);
-  const [userName, setUserName] = useState(null);
-  const [userBio, setUserBio] = useState(null);
-  const [userID, setUserID] = useState(null);
+  const [userPic, setUserPic] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userBio, setUserBio] = useState("");
+  const [userID, setUserID] = useState("");
+  const [userPosts, setUserPosts] = useState("");
 
   useEffect(() => {
     const { id } = match.params;
@@ -28,11 +36,12 @@ export default function User({ match }) {
       const result = await axios(
         `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${id}`
       );
-      console.log("User", result.data.data[0].profilePic)
+      console.log("User", result.data.data[0].posts.reverse())
       setUser(result.data.data[0]);
       setUserPic(result.data.data[0].profilePic);
       setUserName(result.data.data[0].userName);
       setUserBio(result.data.data[0].bio);
+      await setUserPosts(result.data.data[0].posts.reverse());
     }
     fetchData();
   }, []);
@@ -70,7 +79,8 @@ export default function User({ match }) {
       <h3>Things I Want Help With:</h3>
       {user && <CardList cards={user.pullList} />}
       <h3>My Journey:</h3>
-      <Timeline />
+      //TODO: Timeline
+      <Timeline user={GLOBAL.googleID}/>
       <img
         src={backdrop}
         alt="Women in  Tech"

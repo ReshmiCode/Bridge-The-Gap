@@ -13,12 +13,13 @@ const Timeline = (props) => {
   let [info, setInfo] = useState([]);
 
   useEffect(() => {
+    console.log("User timeline of", props.user)
     async function fetchData() {
       const result = await axios(
         `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${props.user}`
       );
       setInfo(result.data.data[0].posts.reverse());
-    }
+     }
     fetchData();
   }, []);
 
