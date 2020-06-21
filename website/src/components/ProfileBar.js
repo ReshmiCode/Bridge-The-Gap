@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Avatar, IconButton, TextField, Button } from "@material-ui/core";
 import {
   Create,
@@ -45,15 +45,18 @@ function ProfileBar() {
         {!selected ? (
           <p style={{ fontSize: 20 }}>{info.bio}</p>
         ) : (
-          <TextField
-            multiline
-            rowsMax={4}
-            id="outlined-basic"
-            defaultValue={info.bio}
-            variant="outlined"
-            labelWidth={60}
-            fullWidth
-          />
+          <React.Fragment>
+            <TextField
+              multiline
+              rowsMax={4}
+              id="outlined-basic"
+              defaultValue={info.bio}
+              variant="outlined"
+              labelWidth={60}
+              fullWidth
+            />
+            <Button>Add Component</Button>
+          </React.Fragment>
         )}
         <ToggleButton
           value="check"
