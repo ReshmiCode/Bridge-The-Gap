@@ -30,7 +30,7 @@ export default function Profile() {
       <h3>Things I Want Help With:</h3>
       {user && <CardList cards={user.pullList} />}
       <h3>My Journey:</h3>
-      <Timeline />
+      <Timeline user={GLOBAL.googleID}/>
       <img
         src={backdrop}
         alt="Women in  Tech"
