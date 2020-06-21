@@ -17,6 +17,7 @@ const axios = require("axios").default;
 
 function Feed() {
   let [info, setInfo] = useState([]);
+  const [userName, setUserName] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,6 +38,15 @@ function Feed() {
     width: "100%",
   };
 
+  async function getUserName(userID) {
+    const result = await axios(
+      `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${userID}`
+    );
+    console.log("User", result.data.data[0].userName)
+    setUserName(result.data.data[0].userName);
+    return result.data.data[0].userName;
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -46,6 +56,7 @@ function Feed() {
           {info.map((post) => (
             <GridListTile style={{ width: "20%" }}>
               <Card style={{ height: 200 }}>
+                <p>{post.title}</p>
                 {post.content ? (
                   <CardContent>
                     <Typography>{post.content}</Typography>
@@ -56,7 +67,8 @@ function Feed() {
               </Card>
               <Link to={`user/${post.user}`}>
                 <GridListTileBar
-                  title={post.title}
+                  //title={post.user}
+                  title="User"
                   actionIcon={
                     <IconButton>
                       <InfoIcon />
