@@ -32,11 +32,10 @@ main {
 
 .nav-links li {
   margin: 0 0.5rem;
-  padding: 0.5rem;
-  border: transparent;
+  padding: 0.7rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: #0091b5;
+  background: #ffedd7;
 }
 
 .nav-links a {
@@ -47,9 +46,12 @@ main {
 }
 
 .nav-links li:hover,
-.nav-links li:active,
-.nav-links li.active {
-  background: #ffedd7;
-  border-color: #292929;
-  color: #292929;
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  background: #0091b5;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
