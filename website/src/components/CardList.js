@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
   Card,
   CardContent,
@@ -6,8 +6,13 @@ import {
   GridList,
   GridListTile,
 } from "@material-ui/core";
+const axios = require("axios").default;
+let GLOBAL = require("../global");
 
-const CardList = () => {
+const CardList = (props) => {
+  let [info, setInfo] = useState(["GCP"]);
+  const status = props.type;
+
   const flexContainer = {
     display: "flex",
     flexWrap: "wrap",
@@ -18,23 +23,30 @@ const CardList = () => {
     flexWrap: "nowrap",
     transform: "translateZ(0)",
   };
-  const numbs = [1, 2, 3, 4, 5];
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await axios(
+        `https://mlh-bridge-the-gap.wl.r.appspot.com/api/v1/users/${GLOBAL.googleID}`
+      );
+      if (status === "push"){
+        setInfo(result.data.data[0].pushList);
+      }
+      if (status === "pull"){
+        setInfo(result.data.data[0].pullList);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <div style={flexContainer}>
       <GridList style={gridList}>
-        {numbs.map((o) => (
-          <GridListTile style={{ height: null, width: "25%" }}>
-            <Card>
+        {info.map((item) => (
+          <GridListTile>
+            <Card style={{width: "fit-content"}}>
               <CardContent>
-                <Typography>
-                  {o}: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                </Typography>
+                <p>{item}</p>
               </CardContent>
             </Card>
           </GridListTile>
