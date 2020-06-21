@@ -6,7 +6,7 @@ import {
   GridList,
   GridListTile,
 } from "@material-ui/core";
-import OpportunityCard from "./OpportunityCard";
+import InfoCard from "./InfoCard";
 const axios = require("axios").default;
 
 const OpportunityList = (props) => {
@@ -36,7 +36,7 @@ const OpportunityList = (props) => {
         <div style={flexContainer}>
         <GridList style={gridList}>
         { resources.map(function (resource, i) {
-            return(<OpportunityCard resource={resource}/>)
+            return(<InfoCard resource={resource}/>)
         })}
         </GridList>
         </div>

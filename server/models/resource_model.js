@@ -23,7 +23,7 @@ const ResourceSchema = new mongoose.Schema({
 
     link: {
         type: String,
-        default: 'http://localhost:3000/'
+        default: 'https://mlh-bridge-the-gap.web.app'
     },
 });
 

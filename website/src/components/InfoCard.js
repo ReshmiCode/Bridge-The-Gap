@@ -5,11 +5,13 @@ import {
   Typography,
   GridList,
   GridListTile,
+  CardMedia
 } from "@material-ui/core";
 
 const InfoCard = (props) => {
 
     const resource = props.resource;
+    console.log(resource);
     
     const flexContainer = {
         display: "flex",
@@ -23,10 +25,15 @@ const InfoCard = (props) => {
     };
 
     return (
-        <GridListTile style={{ height: null }}>
+        <GridListTile>
             <Card>
                 <CardContent>
-                    <Typography> {resource.content} </Typography>
+                <Typography variant="h5"> {resource.title} </Typography>
+                <CardMedia
+                    src={resource.image}
+                    title="Resource Image"
+                />
+                <Typography> {resource.content} </Typography>
                 </CardContent>
             </Card>
         </GridListTile>
