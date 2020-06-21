@@ -146,6 +146,30 @@ exports.updateUser = async (req, res, next) => {
             });
         }
 
+        if(req.body.linkedin != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    linkedin: req.body.linkedin
+                } 
+            });
+        }
+
+        if(req.body.twitter != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    twitter: req.body.twitter
+                } 
+            });
+        }
+
+        if(req.body.github != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    github: req.body.github
+                } 
+            });
+        }
+
         return res.status(200).json({
             success: true,
             data: user

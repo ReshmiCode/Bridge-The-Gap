@@ -24,6 +24,18 @@ const UserSchema = new mongoose.Schema({
         type: String
     },
 
+    linkedin: {
+        type: String
+    },
+
+    twitter: {
+        type: String
+    },
+
+    github: {
+        type: String
+    },
+
     push: [
         String
     ],
