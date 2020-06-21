@@ -31,14 +31,8 @@ const InfoCard = (props) => {
                     <Typography variant="h5"> {resource.title} </Typography>
                     {
                         resource.image ? 
-                        <CardMedia
-                            src={resource.image}
-                            title="Resource Image"
-                        />:
-                        <CardMedia
-                            src="https://image.shutterstock.com/image-photo/two-small-rabbits-isolated-on-260nw-795213922.jpg"
-                            title="Resource Image"
-                        />
+                        <img src={resource.image} />:
+                        <img src="https://image.shutterstock.com/image-photo/two-small-rabbits-isolated-on-260nw-795213922.jpg" />
                     }
                     <Typography> {resource.content} </Typography>
                     {
