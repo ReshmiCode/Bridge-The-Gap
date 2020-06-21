@@ -10,6 +10,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
+import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
 function Feed() {
@@ -36,6 +37,7 @@ function Feed() {
 
   return (
     <div className="App">
+      <NavBar />
       <h2> See What Other Women Have Achieved! </h2>
       <div style={flexContainer}>
         <GridList style={{ width: "100%" }}>

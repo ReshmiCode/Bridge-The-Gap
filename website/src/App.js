@@ -12,14 +12,12 @@ import Profile from "./screens/Profile";
 import QnA from "./screens/QnA";
 import Opportunities from "./screens/Opportunities";
 import ScrollToTop from "./components/ScrollToTop";
-import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div>
       <Router>
         <main>
-          <NavBar />
           <ScrollToTop>
             <Switch>
               <Route path="/" exact>

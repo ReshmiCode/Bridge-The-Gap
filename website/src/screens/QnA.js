@@ -8,6 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import SearchBar from "search-bar-react";
+import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
 const direction = {
@@ -50,6 +51,7 @@ function QnA() {
 
   return (
     <div className="App">
+      <NavBar />
       <h2>Frequently Asked Questions</h2>
       <SearchBar size="large" width="100%" autoFocus placeholder="Search..." />
 

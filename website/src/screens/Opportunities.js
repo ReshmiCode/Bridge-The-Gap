@@ -1,10 +1,12 @@
 import React from "react";
 import OpportunityList from "../components/OpportunityList";
 import "./Profile.css";
+import NavBar from "../components/NavBar";
 
 export default function Opportunities() {
   return (
     <div className="App">
+      <NavBar />
       <h2> Opportunities </h2>
       <h3>Organizations</h3>
       <OpportunityList category="organizations" />
