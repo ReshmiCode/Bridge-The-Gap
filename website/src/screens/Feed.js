@@ -2,6 +2,7 @@ import React from "react";
 import {
   Card,
   CardContent,
+  CardMedia,
   Typography,
   GridList,
   GridListTile,
@@ -16,6 +17,7 @@ function Feed() {
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden",
+    width: "100%",
   };
   const tileData = [
     {
@@ -62,14 +64,27 @@ function Feed() {
     <div className="App">
       <h2> See What Other Women Have Achieved! </h2>
       <div style={flexContainer}>
-        <GridList>
+        <GridList style={{ width: "100%" }}>
           {tileData.map((tile) => (
-            <GridListTile style={{ height: null, width: "25%" }}>
-              <Card>
-                <CardContent>
-                  <Typography>{tile.title}</Typography>
-                </CardContent>
+            <GridListTile style={{ width: "20%" }}>
+              <Card style={{ height: 200 }}>
+                {tile.content ? (
+                  <CardContent>
+                    <Typography>{tile.content}</Typography>
+                  </CardContent>
+                ) : (
+                  <CardMedia image={tile.image} style={{ height: 200 }} />
+                )}
               </Card>
+              <GridListTileBar
+                title={tile.title}
+                subtitle={<span>by: {tile.author}</span>}
+                actionIcon={
+                  <IconButton>
+                    <InfoIcon />
+                  </IconButton>
+                }
+              />
             </GridListTile>
           ))}
         </GridList>
