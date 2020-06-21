@@ -21,9 +21,11 @@ function HomePage() {
   return (
     <div className="App">
       <h1 style={{ paddingTop: 25 }}> Bridge The Gap </h1>
-      <p> (Inspiration) {Lorem} </p>
+      <p style={{ margin: 25 }}>
+        {" "}
+        Connect with other women in tech and learn about career opportunities!{" "}
+      </p>
       <SignInWithGoogle />
-      <p> (How It Works) {Lorem} </p>
       <iframe
         width="75%"
         height="550"
@@ -32,7 +34,7 @@ function HomePage() {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Demo Video"
-        style={{ marginBottom: 15 }}
+        style={{ margin: 20 }}
       ></iframe>
       <button
         href="https://devpost.com/software/bridge-the-gap"
