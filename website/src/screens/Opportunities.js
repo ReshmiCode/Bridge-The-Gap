@@ -1,6 +1,7 @@
 import React from "react";
 import OpportunityList from "../components/OpportunityList";
 import "./Profile.css";
+import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
 
 export default function Opportunities() {
@@ -16,6 +17,13 @@ export default function Opportunities() {
       <OpportunityList category="conferences" />
       <h3>Other Resources</h3>
       <OpportunityList category="other" />
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
     </div>
   );
 }

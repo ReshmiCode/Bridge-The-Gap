@@ -8,6 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import SearchBar from "search-bar-react";
+import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
@@ -81,6 +82,13 @@ function QnA() {
       <GridList style={{ width: "100%" }}>
         {questions && renderQuestions()}
       </GridList>
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
     </div>
   );
 }

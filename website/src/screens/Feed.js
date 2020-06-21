@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -10,6 +10,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import InfoIcon from "@material-ui/icons/Info";
+import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 
@@ -64,6 +65,13 @@ function Feed() {
           ))}
         </GridList>
       </div>
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
     </div>
   );
 }

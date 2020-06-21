@@ -3,6 +3,7 @@ import ProfileBar from "../components/ProfileBar";
 import CardList from "../components/CardList";
 import Timeline from "../components/Timeline";
 import "./Profile.css";
+import backdrop from "../assets/gorls.png";
 import NavBar from "../components/NavBar";
 const axios = require("axios").default;
 let GLOBAL = require("../global");
@@ -30,6 +31,13 @@ export default function Profile() {
       {user && <CardList cards={user.pullList} />}
       <h3>My Journey:</h3>
       <Timeline />
+      <img
+        src={backdrop}
+        alt="Women in  Tech"
+        resizeMode={"cover"}
+        style={{ width: "100%", paddingTop: 20 }}
+        source={{ backdrop }}
+      />
     </div>
   );
 }
