@@ -8,6 +8,7 @@ import {
   GitHub,
 } from "@material-ui/icons";
 import ToggleButton from "@material-ui/lab/ToggleButton";
+import ModalButton from "./Modal";
 const axios = require("axios").default;
 let GLOBAL = require("../global");
 
@@ -55,6 +56,7 @@ function ProfileBar() {
               labelWidth={60}
               fullWidth
             />
+            <ModalButton/>
             <Button>Add Component</Button>
           </React.Fragment>
         )}
