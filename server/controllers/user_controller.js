@@ -122,6 +122,30 @@ exports.updateUser = async (req, res, next) => {
             });
         }
 
+        if(req.body.push != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    push: req.body.push
+                } 
+            });
+        }
+
+        if(req.body.pull != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    pull: req.body.pull
+                } 
+            });
+        }
+
+        if(req.body.bio != null) {
+            await User.find({}).where({ "googleID": req.params.id}).replaceOne({}, { 
+                $set: { 
+                    bio: req.body.bio
+                } 
+            });
+        }
+
         return res.status(200).json({
             success: true,
             data: user
