@@ -32,11 +32,8 @@ main {
 
 .nav-links li {
   margin: 0 0.5rem;
-  padding: 0.5rem;
-  border: transparent;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background: #0091b5;
+  padding: 0.7rem;
+  text-decoration: none;
 }
 
 .nav-links a {
@@ -44,12 +41,16 @@ main {
   color: #292929;
   text-decoration: none;
   padding: 0.5rem;
+  background: #ffedd7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .nav-links li:hover,
-.nav-links li:active,
-.nav-links li.active {
-  background: #ffedd7;
-  border-color: #292929;
-  color: #292929;
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  background: #0091b5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }

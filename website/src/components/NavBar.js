@@ -19,7 +19,11 @@ const NavBar = () => {
       <header className="main-header">
         <nav>
           <ul className="nav-links">
-            <NavLink to="/" exact style={{ textDecoration: "none" }}>
+            <NavLink
+              to="/"
+              exact
+              style={{ textDecoration: "none", background: "transparent" }}
+            >
               <h1 style={{ fontSize: 25, color: "#000000" }}>Bridge The Gap</h1>
             </NavLink>
           </ul>
@@ -28,7 +32,7 @@ const NavBar = () => {
           <ul className="nav-links">
             <li>
               <NavLink to="/feed" exact>
-                Home
+                Feed
               </NavLink>
             </li>
             <li>
@@ -41,7 +45,11 @@ const NavBar = () => {
                 Q+A
               </NavLink>
             </li>
-            <NavLink to="/profile" exact>
+            <NavLink
+              to="/profile"
+              exact
+              style={{ marginLeft: 20, background: "transparent" }}
+            >
               <Avatar
                 alt="Profile"
                 src="https://image.shutterstock.com/image-vector/social-member-vector-icon-person-260nw-1139787308.jpg"
