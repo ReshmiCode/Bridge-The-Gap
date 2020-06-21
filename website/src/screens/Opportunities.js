@@ -1,20 +1,18 @@
 import React from "react";
-import CardList from "../components/CardList";
+import OpportunityList from "../components/OpportunityList";
 
-function Opportunities() {
+export default function Opportunities() {
   return (
     <div className="App">
       <h2> Opportunities </h2>
       <h3>Organizations</h3>
-      <CardList />
+      <OpportunityList category="organizations" />
       <h3>Scholarships</h3>
-      <CardList />
+      <OpportunityList category="scholarships" />
       <h3>Conferences</h3>
-      <CardList />
+      <OpportunityList category="conferences" />
       <h3>Other Resources</h3>
-      <CardList />
+      <OpportunityList category="other" />
     </div>
   );
 }
-
-export default Opportunities;
