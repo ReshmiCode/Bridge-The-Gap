@@ -9,9 +9,9 @@ export default function Profile() {
     <div className="App">
       <ProfileBar />
       <h3>Things I Can Help With:</h3>
-      <CardList />
+      <CardList type="push"/>
       <h3>Things I Want Help With:</h3>
-      <CardList />
+      <CardList type="pull"/>
       <h3>My Journey:</h3>
       <Timeline />
     </div>

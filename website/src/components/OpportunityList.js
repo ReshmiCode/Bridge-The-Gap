@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  GridList,
-  GridListTile,
-} from "@material-ui/core";
+import { GridList } from "@material-ui/core";
 import InfoCard from "./InfoCard";
 const axios = require("axios").default;
 

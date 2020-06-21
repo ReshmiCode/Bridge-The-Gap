@@ -25,6 +25,18 @@ function HomePage() {
         allowFullScreen
         title="Demo Video"
       ></iframe>
+      <button
+        href="https://devpost.com/software/bridge-the-gap"
+        target="_blank"
+      >
+        Know More
+      </button>
+      <button
+        href="https://github.com/ReshmiCode/Bridge-The-Gap"
+        target="_blank"
+      >
+        Source Code
+      </button>
       <img
         src={backdrop}
         alt="Women in  Tech"

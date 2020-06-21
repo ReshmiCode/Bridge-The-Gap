@@ -1,13 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  GridList,
-  GridListTile,
-  CardMedia,
-  shadows,
-} from "@material-ui/core";
+import React from "react";
+import { Card, CardContent, Typography, GridListTile } from "@material-ui/core";
 
 const InfoCard = (props) => {
   const resource = props.resource;

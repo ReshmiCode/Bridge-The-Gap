@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import "./NavBar.css";
 let GLOBAL = require("../global");
